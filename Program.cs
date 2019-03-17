@@ -48,7 +48,7 @@ namespace AutoConnectWifi
 
             int connectState = -1;
             while (!string.IsNullOrWhiteSpace(wifiName)
-                && InternetGetConnectedState(out connectState, 0))
+                && !InternetGetConnectedState(out connectState, 0))
             {
                 Console.Write(DateTime.Now.ToString("HH:mm:ss"));
 
