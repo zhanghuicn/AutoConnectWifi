@@ -45,21 +45,15 @@ namespace AutoConnectWifi
             #endregion
 
             #region connect wifi in loop
-            while (!string.IsNullOrWhiteSpace(wifiName))
+
+            int connectState = -1;
+            while (!string.IsNullOrWhiteSpace(wifiName)
+                && InternetGetConnectedState(out connectState, 0))
             {
                 Console.Write(DateTime.Now.ToString("HH:mm:ss"));
 
-                int connectState = -1;
-                if (InternetGetConnectedState(out connectState, 0))
-                {
-                    Console.WriteLine(" network is okay");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine($" connect wifi : {wifiName}");
-                    ConnectWifi(wifiName);
-                }
+                Console.WriteLine($" connect wifi : {wifiName}");
+                ConnectWifi(wifiName);
 
                 Thread.Sleep(1000 * interval);
             }
