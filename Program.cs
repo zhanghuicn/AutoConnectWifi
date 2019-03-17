@@ -53,6 +53,7 @@ namespace AutoConnectWifi
                 if (InternetGetConnectedState(out connectState, 0))
                 {
                     Console.WriteLine(" network is okay");
+                    break;
                 }
                 else
                 {
