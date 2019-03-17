@@ -1,0 +1,7 @@
+D:\Code\AutoConnectWifi\AutoConnectWifi\bin\Debug\AutoConnectWifi.exe.config
+D:\Code\AutoConnectWifi\AutoConnectWifi\bin\Debug\AutoConnectWifi.exe
+D:\Code\AutoConnectWifi\AutoConnectWifi\bin\Debug\AutoConnectWifi.pdb
+D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Debug\AutoConnectWifi.csprojAssemblyReference.cache
+D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Debug\AutoConnectWifi.csproj.CoreCompileInputs.cache
+D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Debug\AutoConnectWifi.exe
+D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Debug\AutoConnectWifi.pdb
