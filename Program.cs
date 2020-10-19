@@ -14,12 +14,14 @@ namespace AutoConnectWifi
 
         private const string argInterval = "--interval";
         private const string argWifi = "--wifi";
+        private const string argNetworkInterface = "--networkInterface";
 
         static void Main(string[] args)
         {
             #region parse arguments
-            int interval = 10;
+            int interval = 15;
             string wifiName = string.Empty;
+            string networkInterfaceName = string.Empty;
 
             if (args != null && args.Length > 0)
             {
@@ -39,6 +41,13 @@ namespace AutoConnectWifi
                             wifiName = args[i + 1];
                         }
                     }
+                    else if (args[i] == argNetworkInterface)
+                    {
+                        if (i + 1 < args.Length)
+                        {
+                            networkInterfaceName = args[i + 1];
+                        }
+                    }
                 }
             }
 
@@ -46,14 +55,13 @@ namespace AutoConnectWifi
 
             #region connect wifi in loop
 
-            int connectState = -1;
             while (!string.IsNullOrWhiteSpace(wifiName)
-                && !InternetGetConnectedState(out connectState, 0))
+                && !InternetGetConnectedState(out int connectState, 0))
             {
                 Console.Write(DateTime.Now.ToString("HH:mm:ss"));
 
                 Console.WriteLine($" connect wifi : {wifiName}");
-                ConnectWifi(wifiName);
+                ConnectWifi(wifiName, networkInterfaceName);
 
                 Thread.Sleep(1000 * interval);
             }
@@ -64,12 +72,23 @@ namespace AutoConnectWifi
         /// connect wifi
         /// </summary>
         /// <param name="wifiName"></param>
-        private static void ConnectWifi(string wifiName)
+        private static void ConnectWifi(string wifiName, string networkInfaceName)
         {
+            var strCmd = "/C ";
+            if (!string.IsNullOrWhiteSpace(networkInfaceName))
+            {
+                strCmd += $" (netsh interface set interface name=\"{networkInfaceName}\" admin=disable) & (netsh interface set interface name=\"{networkInfaceName}\" admin=enable) & ";
+            }
+
+            if (!string.IsNullOrWhiteSpace(wifiName))
+            {
+                strCmd += $" netsh wlan connect {wifiName}";
+            }
+
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
             cmd.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            cmd.StartInfo.Arguments = $"/C netsh wlan connect {wifiName}";
+            cmd.StartInfo.Arguments = strCmd;
             cmd.Start();
         }
     }
