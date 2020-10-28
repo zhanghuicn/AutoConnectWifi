@@ -5,3 +5,9 @@ D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Release\AutoConnectWifi.csprojAssemb
 D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Release\AutoConnectWifi.csproj.CoreCompileInputs.cache
 D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Release\AutoConnectWifi.exe
 D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Release\AutoConnectWifi.pdb
+D:\Code\git\AutoConnectWifi\bin\Release\AutoConnectWifi.exe.config
+D:\Code\git\AutoConnectWifi\bin\Release\AutoConnectWifi.exe
+D:\Code\git\AutoConnectWifi\bin\Release\AutoConnectWifi.pdb
+D:\Code\git\AutoConnectWifi\obj\Release\AutoConnectWifi.csproj.CoreCompileInputs.cache
+D:\Code\git\AutoConnectWifi\obj\Release\AutoConnectWifi.exe
+D:\Code\git\AutoConnectWifi\obj\Release\AutoConnectWifi.pdb

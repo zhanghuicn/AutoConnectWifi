@@ -8,7 +8,6 @@ D:\Code\AutoConnectWifi\AutoConnectWifi\obj\Debug\AutoConnectWifi.pdb
 D:\Code\git\AutoConnectWifi\bin\Debug\AutoConnectWifi.exe.config
 D:\Code\git\AutoConnectWifi\bin\Debug\AutoConnectWifi.exe
 D:\Code\git\AutoConnectWifi\bin\Debug\AutoConnectWifi.pdb
-D:\Code\git\AutoConnectWifi\obj\Debug\AutoConnectWifi.csprojAssemblyReference.cache
 D:\Code\git\AutoConnectWifi\obj\Debug\AutoConnectWifi.csproj.CoreCompileInputs.cache
 D:\Code\git\AutoConnectWifi\obj\Debug\AutoConnectWifi.exe
 D:\Code\git\AutoConnectWifi\obj\Debug\AutoConnectWifi.pdb
